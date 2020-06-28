@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './css/App.css';
 import InputInterface from './InputInterface';
 //import db api
 
@@ -19,7 +19,7 @@ export default class App extends React.Component<{},StateInterface> {
       <div className="App">
         <header className="App-header">
         </header>
-        
+        <InputInterface/>
       </div>
     );
   }
