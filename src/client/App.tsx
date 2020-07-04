@@ -1,30 +1,35 @@
 import React from 'react';
 import './css/App.css';
 import InputInterface from './InputInterface';
+import HomePage from './Homepage';
+import UserHandler from './UserHandler';
 import {InputCard, testCard} from './InputInterface';
+import {Switch, Route, Redirect} from 'react-router-dom';
 
 //import db api
 
-const getCardsTest = async () => {
-  //TEMPORARY TEST CODE, real func will use db
-  var testCards:InputCard[] = require('../tests/testCards.json')['cards'] as InputCard[];
-  return testCards;
-}
 
 //FIXME: implement routes in master app
-enum UserInterfaceState {
-  UserLogin_t,
-  InputInterface_t,
-  AnalInterface_t,
-  loading,
-  err
-}
+
+
+
+const RequireLogin = (component: React.Component, isAuthenticated:boolean, ...rest:any[]) => (
+  <Route {...rest} render={props => (
+    isAuthenticated 
+      ? 
+      (<React.Component {...props}/>)
+      :
+      (<Redirect to={{pathname: '/login', state: {from: props.location}}}/>)
+  )}/>
+);
+
+
+
+
 interface StateInterface{
-
-  istate: UserInterfaceState
-  uid: string
+  loading: boolean
+  isAuthenticated:boolean
   cards: InputCard[]
-
 }
 export default class App extends React.Component<{},StateInterface> {
   
@@ -37,34 +42,35 @@ export default class App extends React.Component<{},StateInterface> {
     
     this.state = {
       cards: [testCard],
-      istate: UserInterfaceState.InputInterface_t, // TEMP, future will start with user login
-      uid: ''
+      isAuthenticated: false,
+      loading: false, // TEMP, future will start with user login
     };
   }
 
   render(){
-    switch(this.state.istate){
-      case UserInterfaceState.InputInterface_t:
-        return (
-          <div className="App">
-            <header className="App-header">
-            </header>
-            <InputInterface cards = {this.state.cards} onComplete = {(userData:object)=>console.log('userData recorded: ', userData)}/>
-          </div>
-        );
-      case UserInterfaceState.loading:
-        return (
-          <div className="App">
-            <header className="App-header">
-            </header>
-            {/*TODO: custom loading component*/}
-            <div className = "loading-screen">Loading...</div>
-          </div>
-        );
-      
+    
+    {/*TODO: custom loading component*/}
+    return (
+      <Switch>
+        <Route exact path = '/' component = {HomePage}/>
+        <Route exact path = '/login' component = {UserHandler}/>
+        <RequireLogin path = '/input' isAuthenticated = {this.state.isAuthenticated} component = {InputInterface} cards = {this.state.cards}/>
+
+        
+
+      </Switch>
+    );
+
 
     
     }
-  }
+}
+
+
+
+//TEMPORARY TEST CODE, real func will use db
+const getCardsTest = async () => {
+  var testCards:InputCard[] = require('../tests/testCards.json')['cards'] as InputCard[];
+  return testCards;
 }
 
