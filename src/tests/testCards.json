@@ -1,0 +1,25 @@
+{
+    "cards": [
+    {
+        "question": "Is this a rating input test",
+        "shortName": "rate-test-val",
+        "example": 2,
+        "inputType": 2,
+        "emojis": ["😵","😭","😷","😡","😖"]  
+    },
+    {
+        "question": "Is this a string input test",
+        "shortName": "string-test-response",
+        "example": "e.g. lorem ipsum",
+        "inputType": 0,
+        "emojis": ["😡","😖"]  
+    },
+    {
+        "question": "Is this a number input test",
+        "shortName": "e.g. number-test-val",
+        "example": 7,
+        "inputType": 1,
+        "emojis": ["😭","😷","😡","😖"]  
+    }
+    ]
+}
