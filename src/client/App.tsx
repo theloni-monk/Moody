@@ -1,3 +1,4 @@
+
 import React,{useState, useEffect} from 'react';
 import {Switch, Route} from 'react-router-dom';
 
@@ -13,6 +14,15 @@ import { useLocalStorage, deleteFromStorage } from '@rehooks/local-storage';
 
 import { AuthContext } from "./context/auth";
 const secrets = require('../secrets.json'); // stores google clientid
+
+const https = require('https');
+const axios = require('axios').default;
+const backend = axios.create({
+  baseURL: 'http://localhost:5000', //TODO: migrate backend to https
+  httpsAgent: new https.Agent({  
+    rejectUnauthorized: false
+  })
+});
 
 // all keys must have expiration field
 export interface token_format{
@@ -45,13 +55,26 @@ export const App = () => { //Functional Component
  
   useEffect(()=> { 
     try{
-      if(authToken){
+      if(authToken && !loggedIn){
         console.log('authToken useEffect called');
         console.log('authToken', authToken)
         let tk = authToken.id_token;
-        
-        //TESTING ONLY
-        setLoggedIn(true);
+
+        backend.post('/login',{
+          id_token: tk
+        }).then((response:Response)=>{
+          if(response.status === 200) { // response 200 ok - we successfully logged in and have a signed session
+            setLoggedIn(true);
+            //TODO: set user in the state to the google profileobj returned
+          }
+          else if(response.status === 401){ // response 401 unauthorized - our token was invalid
+            throw Error('Token Invalid');
+          }
+          else{
+            throw Error('Illegal backend response');
+          }
+        }) // on login success set loggedin context
+        .catch((error:Error) => console.log(error)); // backend failure
       }
         //ping backend server and if we get a logged in session then save it
     }
