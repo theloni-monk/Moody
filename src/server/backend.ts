@@ -1,5 +1,5 @@
 const express = require('express');
-const { userRouter, authRouter } = require('./routes');
+const { userRouter, authRouter, moodRouter, moodConfigRouter } = require('./routes');
 const secrets = require('../secrets.json');
 
 var bodyParser = require('body-parser');
@@ -31,6 +31,10 @@ const port = process.env.PORT || "5000";
 app.use('/auth', authRouter);
 
 app.use('/users', userRouter);
+
+app.use('/users:uid', moodRouter);
+
+app.use('/users/:uid/config', moodConfigRouter);
 
 app.listen(port, function(){
     console.log('backend server listening at port', port);

@@ -21,10 +21,10 @@ router.post('/', async (req: Request, res: Response) => {
     let tk:string = req.body['id_token'];
     console.log('authtk received',tk);
     let payload = await verifyAndExtract(tk).catch(
-        (err: Error) => {console.log('Authroute unauthorized request'); res.status(401).end(); return;} 
+        (err: Error) => {console.log('Auth route unauthorized request'); res.status(401).end(); return;} 
     );
     console.log('decrypted payload: ', payload);
-    //TODO: create/get user and return profile info
+    //TODO: create/get user and return profile info and sign session with user_id
     res.status(200).send('some userdata').end();
     return;
 });
