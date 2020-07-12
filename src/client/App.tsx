@@ -60,7 +60,7 @@ export const App = () => { //Functional Component
         console.log('authToken', authToken)
         let tk = authToken.id_token;
 
-        backend.post('/login',{
+        backend.post('/auth',{
           id_token: tk
         }).then((response:Response)=>{
           if(response.status === 200) { // response 200 ok - we successfully logged in and have a signed session
@@ -76,27 +76,25 @@ export const App = () => { //Functional Component
         }) // on login success set loggedin context
         .catch((error:Error) => console.log(error)); // backend failure
       }
-        //ping backend server and if we get a logged in session then save it
     }
     catch(e){
       console.log('Token not found: ', e);
     }
-  }, [authToken])
+  }, [authToken, loggedIn])
 
 
-  //FIXME: make inputInterface get its own cards
+  //WRITEME: make inputInterface get its own cards
   {/*FAROFF: custom loading component*/}
   return (
-      
         <Switch>
           <AuthContext.Provider value={{loggedIn: loggedIn}}>
 
           <Route exact path = '/' component = {HomePage}/>
         
-          <Route exact path = '/login' component = {() => <UserHandler location = {window.location}/>}/>
+          <Route exact path = '/login' component = {UserHandler}/>
           
-          <RequireLogin component = {InputInterface} path = '/input'/>
-          <RequireLogin component = {AnalInterface} path = '/tracker'/>
+          <RequireLogin component = {InputInterface} isAuth = {loggedIn} exact path = '/input'/>
+          <RequireLogin component = {AnalInterface} isAuth = {loggedIn} extact path = '/tracker'/>
 
           </AuthContext.Provider>
         </Switch>
