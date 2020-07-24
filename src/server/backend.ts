@@ -39,3 +39,4 @@ app.use('/users/:uid/config', moodConfigRouter);
 app.listen(port, function(){
     console.log('backend server listening at port', port);
 });
+export function dummy(){console.log('dumb');}

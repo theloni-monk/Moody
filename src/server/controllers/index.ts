@@ -10,6 +10,6 @@ const moodConfigController = new MoodConfigController();
 export {
     userController,
     moodController,
-    moodConfigController,
-    Request
+    moodConfigController
 };
+export type {Request};

@@ -7,18 +7,19 @@ export const router = express.Router({
 //TODO: implement req parsing in router not controller
 //TODO: implement seperate mood routing per user
 
-router.post('/', (req: Request, res: Response) => {
+//HACK: casting req to any to avoid diff method types for reqs with session data
+router.post('/', (req: any, res: Response) => {
     userController.create(req, res);
 });
 
-router.get('/', (req: Request, res: Response) => {
+router.get('/', (req: any, res: Response) => {
     userController.read(req, res);
 });
 
-router.patch('/', (req: Request, res: Response) => {
+router.patch('/', (req: any, res: Response) => {
     userController.update(req, res);
 });
 
-router.delete('/', (req: Request, res: Response) => {
+router.delete('/', (req: any, res: Response) => {
     userController.delete(req, res);
 });

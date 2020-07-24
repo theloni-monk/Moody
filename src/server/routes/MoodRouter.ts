@@ -5,19 +5,19 @@ export const router = express.Router({
     strict: true
 });
 
-router.post('/', (req: Request, res: Response) => {
+router.post('/', (req: any, res: Response) => {
     moodController.create(req, res);
 });
 
-router.get('/', (req: Request, res: Response) => {
+router.get('/', (req: any, res: Response) => {
     moodController.read(req, res);
 });
 
-router.patch('/', (req: Request, res: Response) => {
+router.patch('/', (req: any, res: Response) => {
     moodController.update(req, res);
 });
 
-router.delete('/', (req: Request, res: Response) => {
+router.delete('/', (req: any, res: Response) => {
     moodController.delete(req, res);
 });
 
