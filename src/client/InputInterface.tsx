@@ -10,7 +10,7 @@ export enum InputTypes{
     number_i,
     rating_i
 }
-
+//TODO: add boolean InputComponent
 // the fundemental information type needed to construct a card - passed to inputcomponent with callback func
 export interface InputCard{
     question: string,
@@ -20,13 +20,6 @@ export interface InputCard{
     emojis: string[]
 }
 
-export const testCard: InputCard = {
-    question: 'Is this a rating input test',
-    shortName: 'testing-sname',
-    example: '3',
-    inputType: InputTypes.rating_i,
-    emojis: ['😵','😭','😷','😡','😖']
-}
 
 interface PropInterface{
     cards: InputCard[]
@@ -37,7 +30,7 @@ interface StateInterface{
     userData: {[index: string]: any}
 }
 //TODO: randomize order of Qs
-export default class InputInterface extends React.Component<PropInterface,StateInterface>{
+export default class InputInterface extends React.Component<PropInterface, StateInterface>{
 
     constructor(props: PropInterface){
         super(props);
@@ -56,6 +49,7 @@ export default class InputInterface extends React.Component<PropInterface,StateI
 
         this.setState({userData: newUserData}, ()=>{
             //setState does not provide immediate mutation, anything depending on the correct new state after a setstate is executed in callback function
+            //FIXME: oncomplete redirect to dashboard or tracker or thanks or whatever
             if(this.state.cardIndex + 1 >= this.props.cards.length) this.props.onComplete(this.state.userData); // run callback after all inputs recorded
             else{ this.setState({cardIndex: this.state.cardIndex+1}) }; // iterate to next input
         });

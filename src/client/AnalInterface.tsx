@@ -1,5 +1,5 @@
 // Analysis Interface component - yes Anal is on purpose
-//WRITEME: last
+//FAROFF - ANAL
 import React, { Component } from 'react'
 
 export class AnalInterface extends Component {

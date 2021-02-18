@@ -1,6 +1,6 @@
 const express = require('express');
 const { userRouter, authRouter, moodRouter, moodConfigRouter } = require('./routes');
-const secrets = require('../secrets.json');
+const secrets = require('./certs/secrets.json');
 
 var bodyParser = require('body-parser');
 const app = express();
@@ -39,4 +39,4 @@ app.use('/users/:uid/config', moodConfigRouter);
 app.listen(port, function(){
     console.log('backend server listening at port', port);
 });
-export function dummy(){console.log('dumb');}
+//export function dummy(){console.log('dumb');}

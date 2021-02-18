@@ -20,6 +20,13 @@
         "example": 7,
         "inputType": 1,
         "emojis": ["😭","😷","😡","😖"]  
+    },
+    {
+        "question": "Any additional notes",
+        "shortName": "notes",
+        "example": "e.g. my gf broke up with me😭",
+        "inputType": 0,
+        "emojis": ["😭","😷","😡","😖"]  
     }
     ]
 }

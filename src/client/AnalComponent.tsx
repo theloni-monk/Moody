@@ -1,4 +1,4 @@
-// WRITEME: last
+// FAROFF: - ANAL
 import React, { Component } from 'react'
 
 export class AnalComponent extends Component {

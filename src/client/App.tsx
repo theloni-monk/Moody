@@ -13,7 +13,6 @@ import AnalInterface from './AnalInterface';
 import { useLocalStorage, deleteFromStorage } from '@rehooks/local-storage';
 
 import { AuthContext } from "./context/auth";
-const secrets = require('../secrets.json'); // stores google clientid
 
 const https = require('https');
 const axios = require('axios').default;
@@ -93,7 +92,7 @@ export const App = () => { //Functional Component
         
           <Route exact path = '/login' component = {UserHandler}/>
           
-          <RequireLogin component = {InputInterface} isAuth = {loggedIn} exact path = '/input'/>
+          <RequireLogin component = {InputInterface} isAuth = {loggedIn} cards = {getCardsTest()} exact path = '/input'/>
           <RequireLogin component = {AnalInterface} isAuth = {loggedIn} extact path = '/tracker'/>
 
           </AuthContext.Provider>
@@ -105,7 +104,7 @@ export const App = () => { //Functional Component
 
 
 //TEMPORARY TEST CODE, real func will use db
-const getCardsTest = async () => {
+const getCardsTest = () => {
   var testCards:InputCard[] = require('../tests/testCards.json')['cards'] as InputCard[];
   return testCards;
 }

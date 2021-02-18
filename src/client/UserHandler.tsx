@@ -9,7 +9,7 @@ import { token_format, removeExpiredTokens } from './App';
 import { writeStorage} from '@rehooks/local-storage';
 import { render } from '@testing-library/react';
 
-const secrets = require('../secrets.json'); // stores google clientid
+const secrets = require('../google-secrets.json'); // stores google clientid
 
 
 class UserHandler extends React.Component<any, any> {
@@ -69,7 +69,8 @@ class UserHandler extends React.Component<any, any> {
         );
         return (
             <div id='google-login-processing'>
-                You must log in to view the content at {this.from.pathname}. Your google_id_token is processing, you will be redirected shortly...
+                {(this.from.pathname)? <p> You must log in to view the content at {this.from.pathname} </p>: <p/>}
+                <p>Your google_id_token is processing, you will be redirected shortly...</p>
             </div>
         )
     }

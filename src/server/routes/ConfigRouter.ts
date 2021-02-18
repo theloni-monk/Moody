@@ -1,5 +1,5 @@
 import express, {  Response } from 'express';
-import { Request, moodConfigController } from '../controllers';
+import { moodConfigController } from '../controllers';
 
 export const router = express.Router({
     strict: true

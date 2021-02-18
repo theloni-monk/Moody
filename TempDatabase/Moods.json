@@ -1,0 +1,264 @@
+{
+    "name":"Thelonious Cooper",
+    "sub": "dasjfka;ldkgj;lksadkgh",
+    "email-primary":"theo.acooper@gmail.com",
+    "email-verified": true,
+    "lang": "en",
+    "moods": {
+        "6-25-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 4,
+            "energy": 3,
+            "motivation": 3,
+            "sleep-quality": 3,
+            "sleep-hours": 6.5,
+            "naps": 0
+        },
+        "6-26-62020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 2,
+            "motivation": 2,
+            "sleep-quality": 4,
+            "sleep-hours": 8,
+            "naps": 0
+        },
+        "6-27-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality": 3,
+            "sleep-hours": 6,
+            "naps": 0
+        },
+        "6-28-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 2,
+            "energy": 2,
+            "motivation": 2,
+            "sleep-quality": 3,
+            "sleep-hours": 6,
+            "naps": 1
+        },
+        "6-29-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality": 2,
+            "sleep-hours": 6,
+            "naps": 0
+        },
+        "6-30-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 2,
+            "energy": 2,
+            "motivation": 3,
+            "sleep-quality": 3,
+            "sleep-hours": 7,
+            "naps": 0
+        },
+        "7-1-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 1,
+            "energy": 3,
+            "motivation": 3,
+            "sleep-quality": 4,
+            "sleep-hours": 10,
+            "naps": 0
+        },
+        "7-2-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 3,
+            "motivation": 3,
+            "sleep-quality": 4,
+            "sleep-hours": 10,
+            "naps": 0
+        },
+        "7-3-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 1,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality": 3,
+            "sleep-hours": 9,
+            "naps": 1
+        },
+        "7-4-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 2,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality": 3,
+            "sleep-hours": 8,
+            "naps": 2
+        },
+        "7-5-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 4,
+            "motivation": 3,
+            "sleep-quality": 3,
+            "sleep-hours": 8,
+            "naps": 0
+        },
+        "7-6-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 2,
+            "energy": 3,
+            "motivation": 3,
+            "sleep-quality": 3,
+            "sleep-hours": 7,
+            "naps": 0
+        },
+        "7-7-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 1,
+            "energy": 2,
+            "motivation": 2,
+            "sleep-quality": 2,
+            "sleep-hours": 7,
+            "naps": 1
+        },
+        "7-8-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 2,
+            "motivation": 2,
+            "sleep-quality": 4,
+            "sleep-hours": 7,
+            "naps": 0
+        },
+        "7-9-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 4,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality": 3,
+            "sleep-hours": 7,
+            "naps": 0
+        },
+        "7-10-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality": 2,
+            "sleep-hours": 9,
+            "naps": 0
+        },
+        "7-11-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 2,
+            "motivation": 2,
+            "sleep-quality": 2,
+            "sleep-hours": 8,
+            "naps": 0
+        },
+        "7-12-2020":{
+            "no-data":true
+        },
+        "7-13-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 3,
+            "motivation": 3,
+            "sleep-quality": 3,
+            "sleep-hours": 7,
+            "naps": 0
+        },
+        "7-14-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 4,
+            "motivation": 3,
+            "sleep-quality": 4,
+            "sleep-hours": 11,
+            "naps": 0
+        },
+        "7-15-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 4,
+            "motivation": 4,
+            "sleep-quality": 4,
+            "sleep-hours": 8,
+            "naps": 0
+        },
+        "7-16-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 2,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality": 3,
+            "sleep-hours": 7,
+            "naps": 0
+        },
+        "7-17-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 4,
+            "motivation": 3,
+            "sleep-quality": 4,
+            "sleep-hours": 9,
+            "naps": 0
+        },
+        "7-18-2020":{
+            "no-data":true
+        },
+        "7-19-2020":{
+            "no-data":true
+        },
+        "7-20-2020":{
+            "no-data":true
+        },
+        "7-21-2020":{
+            "no-data":true
+        },
+        "7-22-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 2,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality":3,
+            "sleep-hours": 11,
+            "naps": 1
+        },
+        "7-22-2020":{
+            "medication": "Zolaph",
+            "dose-mg": 20,
+            "mood": 3,
+            "energy": 3,
+            "motivation": 2,
+            "sleep-quality":3,
+            "sleep-hours": 7,
+            "naps": 0
+        }
+    }
+}

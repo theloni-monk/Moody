@@ -12,4 +12,3 @@ export {
     moodController,
     moodConfigController
 };
-export type {Request};
